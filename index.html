@@ -54,7 +54,7 @@ body{
   font-size:20px;
   font-weight:600;
   color:#fff;
-  white-space: nowrap; /* Text ko double line hone se rokta hai */
+  white-space: nowrap;
 }
 
 .join-btn{
@@ -203,23 +203,21 @@ footer{
 }
 
 @media(max-width:768px){
-  /* Mobile pe JOIN button completely remove kar diya (space bhi nahi lega) */
   .join-btn {
     display: none;
   }
 
-  /* Mobile pe navbar justify-content center kar diya taaki left side centered rahe aur right side mein koi empty space na dikhe */
   .navbar {
     justify-content: center;
   }
 
   .nav-left {
-    gap:4px;
+    gap:6px;
   }
 
   .brand-name {
     font-size: 22px;
-    white-space: nowrap; /* Mobile pe bhi text double line nahi hoga */
+    white-space: nowrap;
   }
 
   .hero-cta i {
@@ -227,8 +225,8 @@ footer{
   }
 
   .logo-img {
-    width:102px;
-    height:102px;
+    width:92px;
+    height:92px;
   }
 
   .countdown {
@@ -251,7 +249,8 @@ footer{
 
 <nav class="navbar">
   <div class="nav-left">
-    <img src="Archive/200.png" class="logo-img">
+    <!-- Ab direct online URL use kiya hai, image har jagah dikhega -->
+    <img src="https://res.cloudinary.com/dg9frllv2/image/upload/v1766397021/200_cl0ykq.png" class="logo-img" alt="100X VIP Logo">
     <div class="brand-name">
       <span style="color:#1db954">100</span><span style="color:#ff5252">X</span> VIP Community
     </div>
@@ -263,7 +262,7 @@ footer{
 </nav>
 
 <section class="hero">
-  <h1><span class="green">100</span><span class="red">X</span> VIP Community</h1>
+  <h1><span class="green">100</span><span class="red">X</span> Trading Club</h1>
   <p>Professional market insights, structured trade setups, and disciplined strategies for serious traders.</p>
 
   <div class="offer-text">
