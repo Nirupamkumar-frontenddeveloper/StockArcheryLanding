@@ -6,7 +6,6 @@
 <title>100X VIP Community</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
 *{
@@ -39,7 +38,7 @@ body{
 .nav-left{
   display:flex;
   align-items:center;
-  gap:2px; /* Desktop pe bhi 2px gap */
+  gap:2px;
 }
 
 .logo-img{
@@ -58,23 +57,15 @@ body{
 }
 
 .join-btn{
-  display:flex;
-  align-items:center;
-  gap:6px;
   background:#1e88e5;
   color:#fff;
-  padding:14px 26px;
+  padding:14px 30px;
   border-radius:36px;
   border:none;
   cursor:pointer;
   font-size:16px;
   font-weight:700;
   box-shadow:0 0 24px rgba(30,136,229,.6);
-}
-
-.join-btn i{
-  font-size:26px;
-  background:none;
 }
 
 .hero{
@@ -164,20 +155,14 @@ body{
   margin-top:30px;
   display:inline-flex;
   align-items:center;
-  gap:10px;
   background:#1e88e5;
   color:#fff;
-  padding:18px 44px;
+  padding:18px 50px;
   border-radius:44px;
   font-size:16px;
   font-weight:800;
   cursor:pointer;
   box-shadow:0 0 42px rgba(30,136,229,.75);
-}
-
-.hero-cta i{
-  font-size:28px;
-  background:none;
 }
 
 .social-proof{
@@ -212,17 +197,9 @@ footer{
     justify-content: center;
   }
 
-  .nav-left {
-    gap:2px; /* Mobile pe bhi 2px gap */
-  }
-
   .brand-name {
     font-size: 22px;
     white-space: nowrap;
-  }
-
-  .hero-cta i {
-    font-size: 46px;
   }
 
   .logo-img {
@@ -256,8 +233,8 @@ footer{
     </div>
   </div>
 
-  <button class="join-btn" onclick="joinTelegram()">
-    <i class="fa-brands fa-telegram"></i> JOIN
+  <button class="join-btn" onclick="joinCommunity()">
+    JOIN COMMUNITY
   </button>
 </nav>
 
@@ -279,8 +256,8 @@ footer{
     </div>
   </div>
 
-  <div class="hero-cta" onclick="joinTelegram()">
-    <i class="fa-brands fa-telegram"></i> JOIN TELEGRAM
+  <div class="hero-cta" onclick="joinCommunity()">
+    JOIN COMMUNITY
   </div>
 
   <div class="social-proof">
@@ -293,8 +270,8 @@ footer{
 </footer>
 
 <script>
-function joinTelegram(){
-  window.open("https://t.me/stockarchery","_blank")
+function joinCommunity(){
+  window.open("https://t.me/stockarchery","_blank");
 }
 
 let duration = 24 * 60 * 60;
