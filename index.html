@@ -24,7 +24,7 @@ body{
 .navbar{
   width:100%;
   height:96px;
-  background:#0b0b0b;
+  background:#000;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -39,7 +39,7 @@ body{
 .nav-left{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:2px; /* Desktop pe bhi 2px gap */
 }
 
 .logo-img{
@@ -91,6 +91,7 @@ body{
   font-weight:800;
   margin-bottom:14px;
   color:#fff;
+  white-space: nowrap;
 }
 
 .hero h1 .green{color:#1db954}
@@ -212,7 +213,7 @@ footer{
   }
 
   .nav-left {
-    gap:6px;
+    gap:2px; /* Mobile pe bhi 2px gap */
   }
 
   .brand-name {
@@ -249,7 +250,6 @@ footer{
 
 <nav class="navbar">
   <div class="nav-left">
-    <!-- Ab direct online URL use kiya hai, image har jagah dikhega -->
     <img src="https://res.cloudinary.com/dg9frllv2/image/upload/v1766397021/200_cl0ykq.png" class="logo-img" alt="100X VIP Logo">
     <div class="brand-name">
       <span style="color:#1db954">100</span><span style="color:#ff5252">X</span> VIP Community
@@ -297,27 +297,29 @@ function joinTelegram(){
   window.open("https://t.me/stockarchery","_blank")
 }
 
-let duration = 24 * 60 * 60
-let timer = localStorage.getItem("offerTimer")
+let duration = 24 * 60 * 60;
+let timer = localStorage.getItem("offerTimer");
 
 if(!timer || timer <= 0){
-  timer = duration
+  timer = duration;
+} else {
+  timer = parseInt(timer);
 }
 
 setInterval(()=>{
-  let h = Math.floor(timer / 3600)
-  let m = Math.floor((timer % 3600) / 60)
-  let s = timer % 60
+  let h = Math.floor(timer / 3600);
+  let m = Math.floor((timer % 3600) / 60);
+  let s = timer % 60;
 
-  document.getElementById("hh").innerText = String(h).padStart(2,"0")
-  document.getElementById("mm").innerText = String(m).padStart(2,"0")
-  document.getElementById("ss").innerText = String(s).padStart(2,"0")
+  document.getElementById("hh").innerText = String(h).padStart(2,"0");
+  document.getElementById("mm").innerText = String(m).padStart(2,"0");
+  document.getElementById("ss").innerText = String(s).padStart(2,"0");
 
-  timer--
-  if(timer < 0) timer = duration
+  timer--;
+  if(timer < 0) timer = duration;
 
-  localStorage.setItem("offerTimer", timer)
-},1000)
+  localStorage.setItem("offerTimer", timer);
+},1000);
 </script>
 
 </body>
