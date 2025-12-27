@@ -7,6 +7,25 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3453987861418558');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3453987861418558&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
 *{
   margin:0;
@@ -15,9 +34,11 @@
   font-family:'Poppins',sans-serif;
 }
 
+/* 🔴 FIX: navbar fixed hai isliye body padding-top */
 body{
   background:#000;
   color:#eaeaea;
+  padding-top:96px; /* navbar height */
 }
 
 .navbar{
@@ -46,14 +67,13 @@ body{
   height:172px;
   border-radius:50%;
   object-fit:contain;
-  background:transparent;
 }
 
 .brand-name{
   font-size:20px;
   font-weight:600;
   color:#fff;
-  white-space: nowrap;
+  white-space:nowrap;
 }
 
 .join-btn{
@@ -69,12 +89,10 @@ body{
 }
 
 .hero{
-  margin-top:140px;
   padding:64px 20px;
   text-align:center;
   max-width:1200px;
-  margin-left:auto;
-  margin-right:auto;
+  margin:auto;
 }
 
 .hero h1{
@@ -82,7 +100,7 @@ body{
   font-weight:800;
   margin-bottom:14px;
   color:#fff;
-  white-space: nowrap;
+  white-space:nowrap;
 }
 
 .hero h1 .green{color:#1db954}
@@ -99,18 +117,16 @@ body{
   margin-top:8px;
   font-size:18px;
   font-weight:700;
-  color:#fff;
 }
 
 .offer-text .old-price{
   text-decoration:line-through;
-  text-decoration-color:#ff5252;
   color:#777;
   margin-right:10px;
 }
 
 .offer-text .free{color:#1db954}
-.offer-text .limited{color:#ff5252;font-weight:600}
+.offer-text .limited{color:#ff5252}
 
 .countdown-wrapper{
   margin-top:22px;
@@ -123,9 +139,7 @@ body{
   gap:12px;
   padding:14px 20px;
   border-radius:18px;
-  background:rgba(20,20,20,.85);
-  backdrop-filter:blur(12px);
-  box-shadow:0 0 36px rgba(0,0,0,.8);
+  background:#111;
 }
 
 .time-box{
@@ -133,7 +147,6 @@ body{
   padding:10px;
   border-radius:14px;
   background:#000;
-  color:#fff;
   box-shadow:inset 0 0 0 1px #1e88e5;
 }
 
@@ -141,84 +154,51 @@ body{
   display:block;
   font-size:24px;
   font-weight:800;
-  line-height:1;
 }
 
 .time-box small{
   font-size:10px;
   color:#9e9e9e;
-  letter-spacing:1px;
-  margin-top:4px;
 }
 
 .hero-cta{
   margin-top:30px;
   display:inline-flex;
-  align-items:center;
   background:#1e88e5;
   color:#fff;
   padding:18px 50px;
   border-radius:44px;
-  font-size:16px;
   font-weight:800;
   cursor:pointer;
-  box-shadow:0 0 42px rgba(30,136,229,.75);
 }
 
 .social-proof{
   margin-top:40px;
 }
 
-.students{
-  font-size:18px;
-  font-weight:600;
-  color:#e0e0e0;
-}
-
-.students span{
-  color:#1db954;
-}
+.students span{color:#1db954}
 
 footer{
   margin-top:80px;
-  padding:20px;
+  padding:28px 20px;
   text-align:center;
-  font-size:13px;
+  font-size:12px;
   color:#9e9e9e;
   border-top:1px solid #1a1a1a;
+  line-height:1.6;
+}
+
+.disclaimer{
+  max-width:900px;
+  margin:12px auto 0;
+  font-size:11.5px;
 }
 
 @media(max-width:768px){
-  .join-btn {
-    display: none;
-  }
-
-  .navbar {
-    justify-content: center;
-  }
-
-  .brand-name {
-    font-size: 22px;
-    white-space: nowrap;
-  }
-
-  .logo-img {
-    width:92px;
-    height:92px;
-  }
-
-  .countdown {
-    gap:8px;
-    padding:12px;
-  }
-
-  .time-box {
-    min-width:64px;
-  }
-
-  .time-box span {
-    font-size:20px;
-  }
+  .join-btn{display:none}
+  .navbar{justify-content:center}
+  .brand-name{font-size:22px}
+  .logo-img{width:92px;height:92px}
 }
 </style>
 </head>
@@ -227,15 +207,12 @@ footer{
 
 <nav class="navbar">
   <div class="nav-left">
-    <img src="https://res.cloudinary.com/dg9frllv2/image/upload/v1766397021/200_cl0ykq.png" class="logo-img" alt="100X VIP Logo">
+    <img src="https://res.cloudinary.com/dg9frllv2/image/upload/v1766397021/200_cl0ykq.png" class="logo-img">
     <div class="brand-name">
       <span style="color:#1db954">100</span><span style="color:#ff5252">X</span> VIP Community
     </div>
   </div>
-
-  <button class="join-btn" onclick="joinCommunity()">
-    JOIN COMMUNITY
-  </button>
+  <button class="join-btn" onclick="joinCommunity()">JOIN COMMUNITY</button>
 </nav>
 
 <section class="hero">
@@ -256,9 +233,7 @@ footer{
     </div>
   </div>
 
-  <div class="hero-cta" onclick="joinCommunity()">
-    JOIN COMMUNITY
-  </div>
+  <div class="hero-cta" onclick="joinCommunity()">JOIN COMMUNITY</div>
 
   <div class="social-proof">
     <div class="students"><span>2000+</span> students have already learned with us</div>
@@ -267,35 +242,37 @@ footer{
 
 <footer>
   © 2025 100X VIP. All rights reserved.
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> This community is for <strong>educational purposes only</strong>.  
+    We do not provide investment advice or guaranteed returns.  
+    Trading involves market risk. Consult a certified financial advisor.  
+    We are not SEBI registered.
+    <br><br>
+    <strong>Privacy:</strong> Tracking tools are used only to improve experience and advertising relevance.
+  </div>
 </footer>
 
 <script>
 function joinCommunity(){
-  window.open("https://t.me/stockarchery","_blank");
+  if (typeof fbq === "function") {
+    fbq('track', 'Lead', {
+      content_name:'Join Telegram Community',
+      platform:'Telegram'
+    });
+  }
+  setTimeout(()=>window.open("https://t.me/stockarchery","_blank"),300);
 }
 
-let duration = 24 * 60 * 60;
+let duration = 86400;
 let timer = localStorage.getItem("offerTimer");
-
-if(!timer || timer <= 0){
-  timer = duration;
-} else {
-  timer = parseInt(timer);
-}
+timer = (!timer || timer<=0)?duration:parseInt(timer);
 
 setInterval(()=>{
-  let h = Math.floor(timer / 3600);
-  let m = Math.floor((timer % 3600) / 60);
-  let s = timer % 60;
-
-  document.getElementById("hh").innerText = String(h).padStart(2,"0");
-  document.getElementById("mm").innerText = String(m).padStart(2,"0");
-  document.getElementById("ss").innerText = String(s).padStart(2,"0");
-
-  timer--;
-  if(timer < 0) timer = duration;
-
-  localStorage.setItem("offerTimer", timer);
+  hh.innerText = String(Math.floor(timer/3600)).padStart(2,"0");
+  mm.innerText = String(Math.floor((timer%3600)/60)).padStart(2,"0");
+  ss.innerText = String(timer%60).padStart(2,"0");
+  timer = timer<=0?duration:timer-1;
+  localStorage.setItem("offerTimer",timer);
 },1000);
 </script>
 
