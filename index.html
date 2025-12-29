@@ -15,11 +15,12 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '3453987861418558');
 fbq('track', 'PageView');
 </script>
+
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=3453987861418558&ev=PageView&noscript=1"/>
@@ -122,14 +123,21 @@ body{
   box-shadow:0 0 26px rgba(30,136,229,.65);
 }
 
-.social-proof{
-  margin-top:42px;
+.support{
+  margin-top:80px;
+  text-align:center;
+  font-size:14px;
+  color:#bdbdbd;
 }
 
-.students span{color:#1db954}
+.support a{
+  color:#1db954;
+  text-decoration:none;
+  font-weight:600;
+}
 
 footer{
-  margin-top:90px;
+  margin-top:28px;
   padding:28px 20px;
   text-align:center;
   font-size:12px;
@@ -166,7 +174,6 @@ footer{
 </nav>
 
 <section class="hero">
-
   <div class="hero-title">
     <span class="green">Stock Market</span>
     <span class="red">Learning Community</span>
@@ -179,14 +186,12 @@ footer{
   <div class="hero-cta" onclick="joinCommunity()">
     JOIN FREE LEARNING COMMUNITY
   </div>
-
-  <div class="social-proof">
-    <div class="students">
-      <span>2000+</span> students have already learned with us
-    </div>
-  </div>
-
 </section>
+
+<div class="support">
+  For support, contact us at  
+  <a href="mailto:stockarcheryy@gmail.com">stockarcheryy@gmail.com</a>
+</div>
 
 <footer>
   © 2025 100X VIP. All rights reserved.
